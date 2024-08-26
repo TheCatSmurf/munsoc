@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient(270deg, #000000, #434343, #000000, #434343);
+  background-size: 400% 400%;
+  animation: gradientMotion 10s ease infinite;
+  color: #ffffff;
+  cursor: url('./images/gavel (1).png'), auto;
+}
+
+@keyframes gradientMotion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.App-header {
+  box-shadow: 10px;
+  background-color: #ffffff; 
+  color: #000000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.App-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.App-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.App-body {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article-box {
+  background-color: #ffffff; 
+  border: 2px solid white; 
+  border-radius: 8px; 
+  margin: 10px; 
+  width: 350px; 
+  height: 350px;
+  text-align: center; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  overflow: hidden; 
+}
+
+.article-box:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5); 
+}
+
+.article-thumbnail {
+  width: 100%; 
+  height: auto; 
+}
+
+.article-headline {
+  padding: 10px; 
+  color: #000000; 
+  font-size: 1em; 
+  font-weight: bold;
+}
+
+.caricature-section {
+  background-color: #ffffff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  width: 200px; 
+  position: sticky; 
+  top: 20px; 
+  text-align: center; 
+}
+
+.caricature-box {
+  margin: 2px; 
+  padding: 10px; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 5px; 
+  cursor: pointer; 
+  text-align: center; 
+}
+
+.caricature-image {
+  width: 150px; 
+  height: auto;
+  border-radius: 0%; 
+  transition: transform 0.3s ease;
+}
+
+.caricature-box:hover .caricature-image {
+  transform: scale(1.1); 
+}
+
+.caricature-title {
+  margin-top: 10px; 
+  color: #000000; 
+  font-weight: bold; 
+}
+
+/* Modal Styles */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75); 
+}
+
+.Modal {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  background: black;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.Modal img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.App-footer {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  color: #000000;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: left;
+  margin-left: 5px;
+  font-style: normal;
+  margin-bottom: 10px; 
+}
+
+.social-media-links a {
+  margin: 0 10px;
+  color: #000000; 
+  text-decoration: none;
+  font-size: 18px; 
+}
+
+.social-media-links a:hover {
+  color: #0077b5; 
+  transition: color 0.3s;
+}
+
+.App-footer p {
+  margin-top: 10px; 
+}
+
+.gavel-click {
+  animation: bangGavel 0.2s forwards;
+}
+
+@keyframes bangGavel {
+  0% {
+    cursor: url('./images/gavel (1).png'), auto;
+  }
+  50% {
+    cursor: url('./images/gavel (2).png'), auto; 
+  }
+  100% {
+    cursor: url('./images/gavel (1).png'), auto;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .App-body {
+    padding: 10px; /* Reduced padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .article-box {
+    width: 90%; /* Full width on smaller screens */
+    height: auto; /* Adjust height automatically */
+    margin: 10px auto; /* Center and add margin */
+  }
+
+  .caricature-section {
+    width: 100%; /* Full width on smaller screens */
+    position: static; /* Remove sticky positioning */
+    margin-bottom: 20px; /* Margin at the bottom */
+  }
+
+  .social-media-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align the links */
+  }
+
+  .social-media-links a {
+    font-size: 16px; /* Smaller font size for links */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    flex-direction: column; /* Stack header items */
+    align-items: center; /* Center align */
+  }
+
+  .App-nav {
+    flex-direction: column; /* Stack nav items */
+    gap: 10px; /* Reduced gap */
+  }
+
+  .article-headline {
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+
+  .caricature-title {
+    font-size: 0.9em; /* Smaller title size */
+  }
+}
