@@ -1,3 +1,4 @@
+//QUIZ GAME
 import React, { useState } from 'react';
 import './QuizGame.css';
 const quizQuestions = [

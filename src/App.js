@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-
-// Import images
+//Importing relevant images from ./images
 import thumbnail1 from './images/thumbnail1.jpg';
 import thumbnail2 from './images/thumbnail2.jpeg';
 import thumbnail3 from './images/thumbnail3.jpeg';
@@ -13,23 +12,23 @@ import caricature1 from './images/caricature1.jpg';
 import caricature2 from './images/caricature2.jpg';
 import caricature3 from './images/caricature3.jpg';
 import { Instagram, Twitter, LinkedIn } from '@mui/icons-material';
-// Import Modal
+
 import Modal from 'react-modal';
 import QuizGame from './components/QuizGame.js';
 
-Modal.setAppElement('#root'); // This is for accessibility purposes
-
+Modal.setAppElement('#root'); 
+// Gavel Cursor
 const handleLinkClick = (e) => {
   e.target.classList.add('gavel-click');
 
-  // Remove the class after the animation completes to reset
+ 
   setTimeout(() => {
       e.target.classList.remove('gavel-click');
-  }, 200); // Match the duration of the animation in milliseconds
+  }, 200); 
 };
 
 function App() {
-  // State to manage modal visibility and selected image
+ 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
@@ -57,7 +56,7 @@ function App() {
       </header>
 
       <main className="App-body">
-        {/* Article Boxes */}
+        {/* Articles */}
         <div className="article-box">
           <img className="article-thumbnail" src={thumbnail1} alt="Article 1" />
           <div className="article-headline">Take a look at the most iconic moments throughout the FIFA World Cups</div>
@@ -76,7 +75,7 @@ function App() {
 
 
 
-        {/* Caricature Section */}
+        {/* Cartoons */}
         <section className="caricature-section">
           <h2 style={{ color: 'white' }}>Caricatures</h2>
           <div className="caricature-box" onClick={() => openModal(caricature1)}>
@@ -111,7 +110,7 @@ function App() {
         <p>© 2024 MUNSoc. All Rights Reserved </p>
       </footer>
 
-      {/* Modal for Enlarged Image */}
+      {/* Failed attempt at enlarging the caricature pictures */}
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="Modal" overlayClassName="Overlay">
         <button onClick={closeModal} style={{ float: 'right', background: 'none', border: 'none', color: 'white', fontSize: '24px' }}>×</button>
         <img src={selectedImage} alt="Enlarged" style={{ width: '100%', height: 'auto' }} />

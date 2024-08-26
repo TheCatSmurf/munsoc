@@ -133,7 +133,7 @@ body {
   font-weight: bold; 
 }
 
-/* Modal Styles */
+
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.75); 
 }
@@ -185,7 +185,7 @@ body {
 .App-footer p {
   margin-top: 10px; 
 }
-
+/* Gavel animation */
 .gavel-click {
   animation: bangGavel 0.2s forwards;
 }
@@ -202,51 +202,51 @@ body {
   }
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries so that the code detects the screen and resize */
 @media (max-width: 768px) {
   .App-body {
-    padding: 10px; /* Reduced padding for smaller screens */
-    flex-direction: column; /* Stack items vertically */
+    padding: 10px;
+    flex-direction: column; 
   }
 
   .article-box {
-    width: 90%; /* Full width on smaller screens */
-    height: auto; /* Adjust height automatically */
-    margin: 10px auto; /* Center and add margin */
+    width: 90%; 
+    height: auto; 
+    margin: 10px auto; 
   }
 
   .caricature-section {
-    width: 100%; /* Full width on smaller screens */
-    position: static; /* Remove sticky positioning */
-    margin-bottom: 20px; /* Margin at the bottom */
+    width: 100%; 
+    position: static; 
+    margin-bottom: 20px; 
   }
 
   .social-media-links {
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center align the links */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .social-media-links a {
-    font-size: 16px; /* Smaller font size for links */
+    font-size: 16px; 
   }
 }
 
 @media (max-width: 480px) {
   .App-header {
-    flex-direction: column; /* Stack header items */
-    align-items: center; /* Center align */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .App-nav {
-    flex-direction: column; /* Stack nav items */
-    gap: 10px; /* Reduced gap */
+    flex-direction: column; 
+    gap: 10px; 
   }
 
   .article-headline {
-    font-size: 0.9em; /* Slightly smaller font size */
+    font-size: 0.9em; 
   }
 
   .caricature-title {
-    font-size: 0.9em; /* Smaller title size */
+    font-size: 0.9em; 
   }
 }
