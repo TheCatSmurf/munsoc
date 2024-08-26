@@ -12,6 +12,8 @@ import caricature1 from './images/caricature1.jpg';
 import caricature2 from './images/caricature2.jpg';
 import caricature3 from './images/caricature3.jpg';
 import { Instagram, Twitter, LinkedIn } from '@mui/icons-material';
+import PublicIcon from '@mui/icons-material/Public';
+
 
 import Modal from 'react-modal';
 import QuizGame from './components/QuizGame.js';

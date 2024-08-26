@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background: linear-gradient(270deg, #000000, #434343, #000000, #434343);
+  background: linear-gradient(135deg, #000000, #434343, #000000, #434343);
   background-size: 400% 400%;
   animation: gradientMotion 10s ease infinite;
   color: #ffffff;
@@ -48,7 +48,12 @@ body {
 .logo h1 {
   margin: 0;
 }
+.MUNlogo {
+  align-items: center;
+  justify-content: center;
+  
 
+}
 .App-nav {
   display: flex;
   gap: 20px;
