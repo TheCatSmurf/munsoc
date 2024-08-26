@@ -12,6 +12,7 @@ import thumbnail6 from './images/thumbnail6.jpg';
 import caricature1 from './images/caricature1.jpg';
 import caricature2 from './images/caricature2.jpg';
 import caricature3 from './images/caricature3.jpg';
+import { Instagram, Twitter, LinkedIn } from '@mui/icons-material';
 // Import Modal
 import Modal from 'react-modal';
 import QuizGame from './components/QuizGame.js';
@@ -98,13 +99,13 @@ function App() {
         <div className="social-media-links">
           <h3>Follow Us:</h3>
           <a href="https://www.instagram.com/mec_munsoc/" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
-            Instagram
+            <Instagram />
           </a>
           <a href="https://x.com/reachmecmun?lang=en" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
-            X
+            <Twitter/>
           </a>
           <a href="https://www.linkedin.com/company/mecmunsoc/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
-            LinkedIn
+            <LinkedIn />
           </a>
         </div>
         <p>© 2024 MUNSoc. All Rights Reserved </p>
